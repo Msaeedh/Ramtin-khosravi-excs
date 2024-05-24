@@ -3,6 +3,8 @@ Ramrin khosravi Cpp Exercises (unofficial)
 
 incomplete: 
 9->4 mostly done
+5_2
+
 
 
 
