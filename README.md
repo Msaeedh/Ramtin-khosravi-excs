@@ -9,10 +9,12 @@ completed sections :
 4
 5
 7
+9
+10
 
 
 incomplete: 
-9->4 mostly done
+
 
 
 
