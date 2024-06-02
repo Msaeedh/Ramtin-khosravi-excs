@@ -1,5 +1,6 @@
-# Ramtin-khosravi-excs
-Ramrin khosravi Cpp Exercises (unofficial)
+# DR.Ramtin.khosravi
+
+DR.Ramrin khosravi Cpp Exercises (unofficial)
 source : https://ramtung.ir/apnotes/html/05_Recursion.html
 
 completed sections : 
@@ -16,7 +17,6 @@ completed sections :
 
 incomplete: 
 11-7 
-13-1
 
 
 
