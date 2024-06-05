@@ -17,6 +17,7 @@ completed sections :
 14
 15
 16
+17
 
 
 incomplete: 
@@ -24,6 +25,7 @@ incomplete:
 14-7
 14-8
 15-2
+17-4
 
 
 
