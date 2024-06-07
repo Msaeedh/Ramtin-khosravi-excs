@@ -144,42 +144,46 @@ void List<T>::merge(List<T> &l) {
 	*this = result ;
 }
 
+
 template<typename T>
-class MyList : public List<T> 
-{
-	public : 
-	void remove_last() {
-		List<T> new_list ;
-		List::Iterato<T> it = this->get_iterator() ;
-		if(!it.has_more_elements())
-			throw deleting_from_empty_list() ;
-		T tmp = it.next_element() ;
-		
-		while(it.has_more_elements()) {
-			new_list.push_back(tmp) ;
-			tmp = it.next_element() ;
+class MyList : public List<T> {
+	public :
+		void remove_last() {
+			auto it = this->get_iterator() ;
+			MyList<T> tmp ;
+			
+			if(!it.has_more_elements())
+				throw deleting_from_empty_list() ;
+			
+			while(it.has_more_elements())
+				tmp.push_back(it.next_element()) ;
+				
+			this->clear() ;
+			
+			it = tmp.get_iterator() ;
+			T last_obj = it.next_element() ;
+			while(it.has_more_elements()) {
+				this->push_back(last_obj ) ;
+				last_obj = it.next_element() ;
+			}
 		}
-		
-		this->List = new_list ;
-		
-	}
-	
 };
 
 int main() {
-    List<int> l;
+    MyList<int> l;
     
     l.push_back(86);
     l.push_front(43);
     l.push_front(12);
-    
-    l.print() ;
-    
-    List::Iterator it = l.get_iterator() ;
-    it.next_element() ;
-    it.add(1000) ;
+    l.push_back(1000) ;
     
     l.print();
+    
+    for(int i = 0 ; i < 5 ; ++i ) {
+    	l.remove_last() ;
+    	l.print() ;
+	}
+    
 }
 
 

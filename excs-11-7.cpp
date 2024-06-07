@@ -10,12 +10,9 @@ class Emploee {
 	string get_name() ;
 	string get_nat_code() ;
 	
-	
 	private :
 	string name ;
 	string nat_code ;
-	
-	
 };
 
 Emploee::Emploee(string _name , string _nat_code ) 

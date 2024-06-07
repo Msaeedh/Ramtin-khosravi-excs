@@ -116,8 +116,7 @@ int main()
 
 Date first_in_season(vector<Date> v ,int season) {
 	
-	is_in_season pred(season) ;
-	return *find_if(v.begin() , v.end() , pred ) ;
+	return *find_if(v.begin() , v.end() , is_in_season(season) ) ;
 }
 
 
